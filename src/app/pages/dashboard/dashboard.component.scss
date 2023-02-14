@@ -1,0 +1,48 @@
+@import "../../../assets/style/variables";
+
+.main-container,
+app-statistics,
+app-degree-progress,
+.full-width {
+  width: 100%;
+}
+
+app-profile {
+  width: 23%;
+}
+
+app-balance,
+app-meeting {
+  width: 300px;
+}
+
+.main-container {
+  .desktop {
+    display: block;
+    padding: 20px 24px;
+    .header {
+      padding-bottom: 20px;
+    }
+  }
+  .mobile {
+    display: none;
+    .title-XXL {
+      padding-bottom: 12px;
+    }
+    * {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .main-container {
+    .desktop {
+      display: none;
+    }
+    .mobile {
+      display: block;
+      padding: 12px 20px;
+    }
+  }
+}

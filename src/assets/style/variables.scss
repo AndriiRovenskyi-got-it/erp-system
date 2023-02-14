@@ -1,0 +1,86 @@
+@font-face {
+  font-family: "Inter-Bold";
+  src: local("Inter-Bold"),
+    url(../fonts/inter/Inter-Bold.ttf) format("truetype");
+}
+
+// colors
+$blueGrey900: #2d3752;
+$blueGrey800: #3d4969;
+$blueGrey700: #4d5975;
+$blueGrey600: #5e6983;
+$blueGrey400: #9aa1b2;
+$blueGrey100: #e1e4eb;
+$blueGrey50: #f7f7fa;
+$green900: #57840d;
+$green500: #9dd14d;
+$green600: #88bf32;
+$green200: #d2f2a0;
+$green50: #f4faeb;
+$grey600: #636466;
+$grey500: #7a7b7d;
+$grey400: #969799;
+$grey300: #b1b1b3;
+$grey100: #e6e6e8;
+$orange: #f7af11;
+$black: #000000;
+$white: #ffffff;
+
+// properties
+$border-line: 1px solid $grey100;
+
+// screens
+$mobile: 790px;
+
+//mixins
+@mixin section-border($border-radius: 16px) {
+  width: 100%;
+  border: 1px solid $grey100;
+  border-radius: 16px;
+}
+
+@mixin margin-top($top: 8px) {
+  margin-top: $top;
+}
+
+@mixin margin-bottom($bottom: 20px) {
+  margin-bottom: $bottom;
+}
+
+@mixin titleBold() {
+  font-family: Inter-Bold;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: $black;
+}
+
+@mixin spanBold() {
+  font-family: Inter-Bold;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@mixin blueGreyBg() {
+  background-color: $blueGrey50;
+  border-radius: 16px;
+  width: 100%;
+}
+
+@mixin widthHeight($px: 16px) {
+  width: $px;
+  height: $px;
+}
+
+@mixin padding($padding: 10px 20px) {
+  padding: $padding;
+}
+
+@mixin padding-top($padding: 16px) {
+  padding-top: $padding;
+}
+
+@mixin border-top($border: 1px solid $grey100) {
+  border-top: $border;
+}

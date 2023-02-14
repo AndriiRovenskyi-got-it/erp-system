@@ -1,0 +1,24 @@
+@import "../../../assets/style/variables";
+
+section {
+  @include section-border;
+  div {
+    padding: 16px;
+    border-top: $border-line;
+    button {
+      background-color: $green600;
+      border-radius: 8px;
+    }
+    .mat-flat-button::ng-deep {
+      span {
+        color: $white;
+      }
+    }
+  }
+  @media (max-width: $mobile) {
+    width: 100%;
+    button {
+      width: 100%;
+    }
+  }
+}

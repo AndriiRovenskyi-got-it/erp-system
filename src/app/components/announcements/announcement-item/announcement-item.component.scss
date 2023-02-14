@@ -1,0 +1,32 @@
+@import "src/assets/style/variables";
+
+.announcement-item {
+  padding: 16px;
+  height: 100%;
+  * {
+    text-align: left;
+  }
+
+  .body-S {
+    color: $grey600;
+  }
+
+  .title-XS-Medium {
+    color: $grey300;
+    div {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background-color: $grey300;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    padding: 16px 12px;
+    height: auto;
+
+    div:nth-child(2) {
+      @include margin-top(12px);
+    }
+  }
+}

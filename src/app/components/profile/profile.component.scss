@@ -1,0 +1,70 @@
+@import "../../../assets/style/variables";
+
+section {
+  @include blueGreyBg;
+  padding-top: 16px;
+  img {
+    width: 80px;
+    @include margin-bottom;
+  }
+
+  .body-L {
+    @include margin-top;
+  }
+
+  .profile-scores {
+    @include margin-top(36px);
+    width: 100%;
+    .profile-score {
+      width: 46%;
+      & div:nth-child(1) {
+        background-color: $green200;
+        color: $green900;
+        border-radius: 30px;
+        padding: 11px 0;
+        width: 55%;
+      }
+      & div:nth-child(2) {
+        @include margin-top;
+        color: $grey500;
+      }
+    }
+  }
+
+  .scheduledDate {
+    width: 100%;
+    background-color: $blueGrey100;
+    color: $blueGrey600;
+    border-radius: 0 0 16px 16px;
+    padding: 18px;
+    margin-top: 46px;
+    @include margin-top(46px);
+    span {
+      color: $blueGrey900;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    width: 100%;
+
+    img {
+      @include margin-bottom($bottom: 12px);
+    }
+
+    .body-L {
+      @include margin-top($top: 4px);
+    }
+
+    .profile-scores {
+      @include margin-top(24px);
+      .profile-score {
+        & div:nth-child(2) {
+          @include margin-top($top: 4px);
+        }
+      }
+    }
+    .scheduledDate {
+      @include margin-top(18px);
+    }
+  }
+}

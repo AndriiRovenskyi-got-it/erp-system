@@ -1,0 +1,66 @@
+@import "src/assets/style/variables";
+
+.statistic-item {
+  padding: 16px;
+  position: relative;
+
+  .statistic-description {
+    * {
+      text-align: left;
+    }
+
+    p:last-child {
+      @include margin-top;
+    }
+  }
+
+  .statistic-spinner {
+    * {
+      text-align: right;
+    }
+
+    & ::ng-deep .mat-progress-spinner circle,
+    .mat-spinner circle {
+      stroke-linecap: round;
+    }
+
+    .body-S {
+      color: $blueGrey400;
+      @include margin-top;
+      &.overlay {
+        position: absolute;
+        right: 16px;
+        bottom: 16px;
+        max-width: 65%;
+      }
+    }
+    &.awesome-statistic {
+      & ::ng-deep .mat-progress-spinner circle,
+      .mat-spinner circle {
+        stroke: $green600;
+        stroke-linecap: round;
+      }
+    }
+    &.normal-statistic {
+      & ::ng-deep .mat-progress-spinner circle,
+      .mat-spinner circle {
+        stroke: $orange;
+        stroke-linecap: round;
+      }
+    }
+  }
+
+  @media (max-width: $mobile) {
+    .statistic-description {
+      p:last-child {
+        @include margin-top($top: 16px);
+      }
+    }
+
+    .statistic-spinner {
+      .body-S {
+        @include margin-top($top: 16px);
+      }
+    }
+  }
+}

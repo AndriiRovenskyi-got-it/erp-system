@@ -1,0 +1,33 @@
+@import "../../../assets/style/variables";
+
+.notification {
+  @include blueGreyBg;
+  padding: 22px 16px;
+  width: 300px;
+
+  mat-icon {
+    @include widthHeight(40px);
+    color: #ff6666;
+    background-color: white;
+    border-radius: 100%;
+  }
+
+  .title-L {
+    @include padding-top;
+  }
+
+  .body-S {
+    color: $grey600;
+    @include padding-top(6px);
+  }
+
+  .title-XS-Medium {
+    color: $grey300;
+    @include padding-top(12px);
+  }
+
+  @media (max-width: $mobile) {
+    width: 100%;
+    min-width: unset;
+  }
+}

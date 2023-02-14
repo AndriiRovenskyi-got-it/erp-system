@@ -1,0 +1,63 @@
+<div class="main-container">
+  <div class="desktop">
+    <div class="header" fxLayout="row" fxLayoutAlign="space-between">
+      <p class="title-XXL">{{ title }}</p>
+      <app-widgets></app-widgets>
+    </div>
+    <div fxLayout="column" fxLayoutAlign="start" fxLayoutGap="16px">
+      <div fxLayout="row" fxLayoutAlign="start" fxLayoutGap="16px">
+        <app-profile></app-profile>
+        <div fxFlex fxLayout="column" fxLayoutAlign="start" fxLayoutGap="16px">
+          <app-statistics></app-statistics>
+          <div fxFlex fxLayout="row" fxLayoutAlign="start" fxLayoutGap="16px">
+            <app-degree-progress></app-degree-progress>
+            <app-balance></app-balance>
+          </div>
+          <div fxFlex fxLayout="row" fxLayoutAlign="start" fxLayoutGap="16px">
+            <app-announcements></app-announcements>
+            <app-meeting></app-meeting>
+          </div>
+        </div>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="start" fxLayoutGap="16px" fxFlexFill>
+        <div
+          class="full-width"
+          fxLayout="column"
+          fxLayoutAlign="start"
+          fxLayoutGap="16px"
+        >
+          <app-account-summary></app-account-summary>
+          <app-payment-plan></app-payment-plan>
+        </div>
+        <div
+          class="full-width"
+          fxLayout="column"
+          fxLayoutAlign="start"
+          fxLayoutGap="16px"
+        >
+          <app-assignments-due></app-assignments-due>
+          <app-recurring-payment></app-recurring-payment>
+          <app-assessments></app-assessments>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mobile">
+    <p class="title-XXL">{{ title }}</p>
+    <div fxLayout="column" fxLayoutAlign="start" fxLayoutGap="16px">
+      <app-profile></app-profile>
+      <app-statistics></app-statistics>
+      <app-degree-progress></app-degree-progress>
+      <app-balance></app-balance>
+      <app-announcements></app-announcements>
+      <app-meeting></app-meeting>
+      <app-widgets></app-widgets>
+      <app-account-summary></app-account-summary>
+      <app-payment-plan></app-payment-plan>
+      <app-recurring-payment></app-recurring-payment>
+      <app-assignments-due></app-assignments-due>
+      <app-assessments></app-assessments>
+    </div>
+  </div>
+</div>

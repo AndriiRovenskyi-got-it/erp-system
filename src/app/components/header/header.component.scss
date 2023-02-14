@@ -1,0 +1,25 @@
+@import "../../../assets/style/variables";
+
+.header {
+  display: block;
+  box-shadow: 0 0 0 1px rgba(17, 24, 39, 0.05), 0 1px 4px rgba(17, 24, 39, 0.05),
+    0 8px 16px rgba(17, 24, 39, 0.05);
+  width: 100%;
+  height: 64px;
+  padding: 16px 24px 16px 20px;
+  background: $blueGrey900;
+
+  &__btn-burger {
+    display: none;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .header__btn-burger {
+    display: block;
+  }
+
+  .logo {
+    width: 155px;
+  }
+}

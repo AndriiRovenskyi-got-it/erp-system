@@ -1,0 +1,26 @@
+@import "../../../assets/style/variables";
+
+.account-summary {
+  @include section-border;
+
+  .summary-header {
+    background-color: $blueGrey50;
+    @include border-top;
+    @include padding;
+  }
+
+  .mat-list-base {
+    @include padding(0 4px);
+    @include border-top;
+  }
+
+  @media (max-width: $mobile) {
+    width: 100%;
+    .summary-header {
+      @include padding(10px 16px);
+    }
+    .mat-list-base {
+      @include padding(0 0);
+    }
+  }
+}

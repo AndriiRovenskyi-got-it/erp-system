@@ -1,0 +1,10 @@
+<section class="degree-progress">
+  <h1 class="title-L">{{ title }}</h1>
+  <div class="body-M" fxLayout="row" fxLayoutAlign="space-between center">
+    <p>
+      Program: <span>{{ program }}</span>
+    </p>
+    <p>{{ value }}%</p>
+  </div>
+  <mat-progress-bar [mode]="'determinate'" [value]="value"> </mat-progress-bar>
+</section>

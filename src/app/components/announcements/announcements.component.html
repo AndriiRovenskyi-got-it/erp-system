@@ -1,0 +1,18 @@
+<section class="announcements">
+  <div
+    class="announcements-header"
+    fxLayout="row"
+    fxLayoutAlign="space-between center"
+  >
+    <div class="title-L">
+      Announcements <span class="span-bold">{{ announcementsQuantity }}</span>
+    </div>
+    <p class="body-S-semi-bold">View all</p>
+  </div>
+  <div fxLayout="row wrap">
+    <app-announcement-item
+      *ngFor="let announcement of announcements"
+      [announcement]="announcement"
+    ></app-announcement-item>
+  </div>
+</section>

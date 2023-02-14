@@ -1,0 +1,16 @@
+@import "../assets/style/variables";
+
+.main-content {
+  overflow: auto;
+}
+
+.menu {
+  position: relative;
+  z-index: 1000;
+}
+
+@media screen and (max-width: $mobile) {
+  .menu {
+    display: none;
+  }
+}

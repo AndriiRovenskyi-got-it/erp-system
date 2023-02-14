@@ -1,0 +1,8 @@
+@import "../../../assets/style/variables";
+
+section {
+  @include section-border;
+  @media (max-width: $mobile) {
+    width: 100%;
+  }
+}

@@ -1,0 +1,32 @@
+<section class="statistic-item" fxLayout="row" fxLayoutAlign="space-between">
+  <div
+    class="statistic-description"
+    fxLayout="column"
+    fxLayoutAlign="start start"
+  >
+    <p class="body-S">{{ statistic?.name }}</p>
+    <p class="title-L">{{ statistic?.count }}</p>
+  </div>
+
+  <div
+    class="statistic-spinner"
+    fxLayout="column"
+    fxLayoutAlign="end end"
+    [ngClass]="
+      statistic?.countPercentage > 75 ? 'awesome-statistic' : 'normal-statistic'
+    "
+  >
+    <mat-progress-spinner
+      [mode]="'determinate'"
+      [value]="statistic?.countPercentage"
+      [diameter]="24"
+    >
+    </mat-progress-spinner>
+    <p
+      class="body-S"
+      [ngClass]="statistic?.countPercentage === 0 ? 'overlay' : ''"
+    >
+      {{ statistic?.countDescription }}
+    </p>
+  </div>
+</section>

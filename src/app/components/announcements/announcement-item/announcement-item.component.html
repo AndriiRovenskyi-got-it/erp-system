@@ -1,0 +1,15 @@
+<section
+  class="announcement-item"
+  fxLayout="column"
+  fxLayoutAlign="space-between space-between"
+>
+  <div fxLayout="column" fxLayoutGap="4px">
+    <h1 class="title-XS">{{ announcement?.title }}</h1>
+    <p class="body-S">{{ announcement?.description }}</p>
+  </div>
+  <div fxLayout="row" fxLayoutGap="8px" fxLayoutAlign="start center">
+    <p class="title-XS-Medium">{{ announcement?.date }}</p>
+    <div class="title-XS-Medium"></div>
+    <p class="title-XS-Medium">{{ announcement?.class }}</p>
+  </div>
+</section>

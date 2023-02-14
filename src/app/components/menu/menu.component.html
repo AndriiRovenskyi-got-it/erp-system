@@ -1,0 +1,78 @@
+<div
+  [@collapse]="collapsed"
+  fxFill
+  fxLayout="column"
+  fxLayoutAlign="space-between start"
+>
+  <div class="width-100">
+    <app-user-information [collapsed]="collapsed"></app-user-information>
+    <ul>
+      <li
+        *ngFor="let menuItem of menu; let i = index"
+        [class.active]="menuItem.active"
+        [class.mobile-mode]="menuItem.mobileMode"
+        [class.space-before]="menuItem.spaceBefore"
+      >
+        <div
+          (click)="toggleMenuItem(i)"
+          class="menu"
+          fxFlexAlign="center"
+          fxLayout="row"
+        >
+          <img
+            [alt]="menuItem.path"
+            [src]="generateIconPath(menuItem)"
+            class="menu__icon"
+            fxFlexAlign="center"
+            height="20"
+            width="20"
+          />
+          <div
+            [@hide]="collapsed"
+            class="menu__name"
+            fxFlex
+            fxFlexAlign="center"
+            fxLayout="row"
+            fxLayoutAlign="space-between start"
+          >
+            <p>{{ menuItem.name }}</p>
+            <img
+              alt="arrow"
+              *ngIf="!!menuItem.submenu"
+              class="menu__arrow"
+              src="../../../assets/icons/arrow.svg"
+            />
+          </div>
+        </div>
+        <ul
+          #submenu
+          [style.height.px]="menuItem.active ? submenu.scrollHeight : 0"
+          class="submenu"
+        >
+          <li *ngFor="let submenu of menuItem.submenu">
+            <a>
+              {{ submenu.name }}
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="menu__collapse" fxLayout="row">
+    <button
+      (click)="toggleMenu()"
+      [@rotatedCollapsedIcon]="collapsed"
+      class="menu__collapse__arrow"
+    >
+      <img
+        alt="collapse arrow"
+        fxLayout="row"
+        fxLayoutAlign="center"
+        height="16"
+        src="../../../assets/icons/collapse-arrow.svg"
+        width="16"
+      />
+    </button>
+    <p class="menu__collapse__text" [@hide]="collapsed">Collapse</p>
+  </div>
+</div>

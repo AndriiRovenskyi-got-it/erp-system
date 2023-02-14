@@ -1,0 +1,26 @@
+<section fxLayout="column" fxLayoutAlign="center center">
+  <img src="../../../assets/icons/{{ profileImage }}" alt="" />
+  <h1 class="title-L">{{ profileName }}</h1>
+  <p class="body-L">{{ profileNumber }}</p>
+  <p class="body-L blue-grey800">{{ profileClass }}</p>
+
+  <div class="profile-scores" fxLayout="row" fxLayoutAlign="center start">
+    <div
+      class="profile-score"
+      fxLayout="column"
+      fxLayoutAlign="center center"
+      *ngFor="let score of scores"
+    >
+      <div class="title-L">{{ score.score }}</div>
+      <div class="body-S">{{ score.description }}</div>
+    </div>
+  </div>
+
+  <div
+    class="body-S scheduledDate"
+    fxLayout="row"
+    fxLayoutAlign="center center"
+  >
+    Scheduled End Date: <span class="title-XS">{{ scheduledEndDate }}</span>
+  </div>
+</section>

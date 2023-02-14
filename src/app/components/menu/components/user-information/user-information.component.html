@@ -1,0 +1,32 @@
+<div
+  [class.user-small]="collapsed"
+  class="user"
+  fxFlex
+  fxFlexAlign="center"
+  fxLayout="row"
+>
+  <div
+    [style.background-image]="'url(assets/images/avatar.svg)'"
+    class="user__avatar"
+    fxFlexAlign="center"
+  ></div>
+  <div
+    [@hide]="collapsed"
+    class="user__information"
+    fxFlex
+    fxFlexAlign="center"
+    fxLayout="row"
+    fxLayoutAlign="space-between start"
+  >
+    <div>
+      <p class="user__information__name">Kathryn M. Bi...</p>
+      <p class="user__information__status">Student</p>
+    </div>
+    <img
+      alt="arrow"
+      class="user__arrow"
+      fxFlexAlign="center"
+      src="../../../../../assets/icons/arrow.svg"
+    />
+  </div>
+</div>

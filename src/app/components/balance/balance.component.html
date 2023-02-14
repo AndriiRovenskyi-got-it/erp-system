@@ -1,0 +1,10 @@
+<section class="balance" fxLayout="row" fxLayoutAlign="space-between">
+  <div fxLayout="column" fxLayoutGap="8px">
+    <p class="body-S">Balance Due:</p>
+    <p class="title-XL">{{ balance }}</p>
+  </div>
+  <div fxLayout="column" fxLayoutAlign="end end" fxLayoutGap="8px">
+    <p class="body-S">Pay by: {{ paymentDate }}</p>
+    <button mat-flat-button>Pay now</button>
+  </div>
+</section>

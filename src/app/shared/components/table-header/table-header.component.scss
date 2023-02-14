@@ -1,0 +1,26 @@
+@import "src/assets/style/variables";
+
+div:first-child {
+  padding: 16px 20px;
+  mat-icon {
+    background-color: $blueGrey50;
+    color: $grey400;
+    border-radius: 50%;
+    font-size: 16px;
+    @include widthHeight;
+  }
+}
+
+@media(max-width: $mobile) {
+  div:first-child {
+    padding: 14px 16px;
+    .title-M {
+      @include titleBold;
+    }
+
+    mat-icon {
+      @include widthHeight(28px);
+    }
+  }
+}
+

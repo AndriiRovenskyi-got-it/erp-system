@@ -1,0 +1,146 @@
+@import "../../../assets/style/variables";
+
+:host {
+  display: block;
+  overflow-x: hidden;
+  width: max-content;
+  height: 746px;
+  background: $blueGrey700;
+
+  ul,
+  li {
+    margin: 0;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+  }
+
+  p {
+    color: $white;
+  }
+
+  .menu {
+    position: relative;
+    transition: all 0.4s ease;
+    margin: 0 20px;
+    border-radius: 8px;
+    padding: 5px 10px;
+    height: 40px;
+    font-size: 14px;
+    cursor: pointer;
+    color: $white;
+
+    &__icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    &__name {
+      padding-left: 12.5px;
+    }
+
+    &__collapse {
+      padding: 20px 20px 20px 30px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+
+      &__arrow {
+        border: 1px solid $blueGrey600;
+        border-radius: 24px;
+        width: 24px;
+        height: 24px;
+        background: none;
+        margin-right: 10px;
+        padding: 0;
+
+        img {
+          margin: 0 auto;
+        }
+      }
+
+      &__text {
+        line-height: 24px;
+      }
+    }
+  }
+
+  li {
+    position: relative;
+
+    &:not(.active) {
+      opacity: 0.7;
+    }
+
+    &.space-before {
+      margin-top: 38.5px;
+    }
+
+    &.active {
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 0 4px 4px 0;
+        width: 4px;
+        height: 100%;
+        background: $green500;
+      }
+
+      img {
+        color: $green500;
+        filter: brightness(0) saturate(100%) invert(68%) sepia(10%)
+          saturate(2118%) hue-rotate(42deg) brightness(107%) contrast(98%);
+      }
+
+      .menu {
+        background: $blueGrey900;
+
+        p {
+          color: $green500;
+        }
+
+        &__arrow {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  .submenu {
+    overflow: hidden;
+    transition: height 0.4s ease;
+    height: 0;
+    padding: 0;
+    font-size: 14px;
+    -webkit-transition: height 0.4s ease;
+
+    a {
+      padding: 12px 12px 12px 35px;
+      display: block;
+      text-decoration: none;
+      color: $white;
+      transition: all 0.25s ease-in-out;
+
+      &:hover {
+        color: $green500;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $mobile) {
+  li.mobile-mode {
+    display: none;
+  }
+}
+
+@media (max-width: $mobile) {
+  .menu__collapse {
+    display: none !important;
+  }
+  :host {
+    height: 100%;
+  }
+}

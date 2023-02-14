@@ -1,0 +1,36 @@
+@import "../../../assets/style/variables";
+
+.balance {
+  @include blueGreyBg;
+  padding: 16px;
+  min-width: 300px;
+  div {
+    .body-S {
+      @include margin-bottom(8px);
+    }
+    &:first-child {
+      .body-S {
+        text-align: left;
+      }
+    }
+    &:last-child {
+      .body-S {
+        text-align: right;
+        color: $grey600;
+      }
+      button.mat-flat-button.mat-focus-indicator.mat-button-base {
+        background-color: $green600;
+        border-radius: 8px;
+      }
+      .mat-flat-button::ng-deep {
+        span {
+          color: $white;
+        }
+      }
+    }
+  }
+  @media (max-width: $mobile) {
+    width: 100%;
+    min-width: unset;
+  }
+}

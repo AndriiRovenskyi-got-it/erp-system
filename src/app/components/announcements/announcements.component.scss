@@ -1,0 +1,59 @@
+@import "../../../assets/style/variables";
+
+.announcements {
+  @include section-border;
+  .announcements-header {
+    padding: 14px 16px;
+    border-bottom: 1px solid $blueGrey100;
+
+    .span-bold {
+      @include spanBold;
+      background-color: $blueGrey50;
+      border-radius: 20px;
+      color: $green600;
+      padding: 2px 8px;
+      margin-left: 10px;
+    }
+
+    .body-S-semi-bold {
+      color: $green600;
+      margin-right: 10px;
+    }
+  }
+
+  div {
+    app-announcement-item {
+      width: calc(33% - 2px);
+      min-height: 134px;
+      @media (min-width: $mobile) {
+        &:not(:last-child) {
+          border-right: 1px solid $blueGrey100;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $mobile) {
+    width: 100%;
+
+    div {
+      app-announcement-item {
+        width: 100%;
+        height: auto;
+        min-height: unset;
+        border-right: none;
+        &:not(:first-child) {
+          border-top: 1px solid $blueGrey100;
+        }
+      }
+    }
+
+    .announcements-header {
+      padding: 12px;
+
+      .title-L {
+        @include titleBold;
+      }
+    }
+  }
+}
