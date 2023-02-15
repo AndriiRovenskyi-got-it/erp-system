@@ -1,9 +1,14 @@
 @import "../../../assets/style/variables";
 
 .degree-progress {
-  padding: 16px;
+  height: 106px;
+  box-sizing: border-box;
   @include section-border;
   width: unset;
+
+  .container {
+    padding: 16px;
+  }
 
   .title-L {
     text-align: left;

@@ -107,7 +107,7 @@ export class MenuComponent implements OnInit {
         mobileMode: true,
       },
     ];
-    this.collapsed = false;
+    this.collapsed = true;
   }
 
   ngOnInit() {}

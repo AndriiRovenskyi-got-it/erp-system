@@ -19,6 +19,7 @@ section {
   }
   @media (max-width: $mobile) {
     width: 100%;
+    flex-flow: row wrap;
     app-statistic-item {
       width: calc(50% - 2px);
       &:first-child {
