@@ -1,4 +1,13 @@
-<mat-list role="list" *ngFor="let item of items" fxLayout="row" fxLayoutAlign="space-between center">
-  <mat-list-item class="body-M" role="listitem">{{item?.title}}</mat-list-item>
-  <mat-list-item class="body-M" role="listitem" fxLayoutAlign="end">{{item?.cost | currency}}</mat-list-item>
+<mat-list
+  role="list"
+  *ngFor="let item of items"
+  fxLayout="row"
+  fxLayoutAlign="space-between center"
+>
+  <mat-list-item class="body-M" role="listitem">{{
+    item?.title
+  }}</mat-list-item>
+  <mat-list-item class="body-M" role="listitem" fxLayoutAlign="end">{{
+    item?.cost | currency
+  }}</mat-list-item>
 </mat-list>

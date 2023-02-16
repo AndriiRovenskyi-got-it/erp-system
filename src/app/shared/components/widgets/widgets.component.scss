@@ -8,6 +8,7 @@ button.mat-flat-button.mat-focus-indicator.mat-button-base {
   border: 1px solid $green200;
   border-radius: 10px;
 }
+
 .mat-flat-button::ng-deep {
   span {
     color: $green600;

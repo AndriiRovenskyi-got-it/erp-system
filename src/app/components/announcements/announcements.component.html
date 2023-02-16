@@ -1,4 +1,4 @@
-<section class="announcements">
+<section fxFlex fxLayout="column" class="announcements">
   <div
     class="announcements-header"
     fxLayout="row"
@@ -9,10 +9,12 @@
     </div>
     <p class="body-S-semi-bold">View all</p>
   </div>
-  <div fxLayout="row wrap">
-    <app-announcement-item
-      *ngFor="let announcement of announcements"
-      [announcement]="announcement"
-    ></app-announcement-item>
+  <div class="height-100">
+    <div class="height-100" fxLayout="row wrap">
+      <app-announcement-item
+        *ngFor="let announcement of announcements"
+        [announcement]="announcement"
+      ></app-announcement-item>
+    </div>
   </div>
 </section>

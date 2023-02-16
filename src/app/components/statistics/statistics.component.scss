@@ -2,38 +2,48 @@
 
 section {
   width: 100%;
+
   app-statistic-item {
     border: 1px solid $grey100;
     width: calc(25% - 1px);
+
     @media (min-width: $mobile) {
       &:first-child {
         border-radius: 16px 0 0 16px;
       }
+
       &:last-child {
         border-radius: 0 16px 16px 0;
       }
+
       &:not(:last-child) {
         border-right: none;
       }
     }
   }
+
   @media (max-width: $mobile) {
     width: 100%;
     flex-flow: row wrap;
+
     app-statistic-item {
       width: calc(50% - 2px);
+
       &:first-child {
         border-radius: 16px 0 0 0;
         border-right: none;
       }
+
       &:nth-child(2) {
         border-radius: 0 16px 0 0;
       }
+
       &:nth-child(3) {
         border-radius: 0 0 0 16px;
         border-right: none;
         border-top: none;
       }
+
       &:last-child {
         border-radius: 0 0 16px 0;
         border-top: none;

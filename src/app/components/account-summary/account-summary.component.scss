@@ -16,9 +16,11 @@
 
   @media (max-width: $mobile) {
     width: 100%;
+
     .summary-header {
       @include padding(10px 16px);
     }
+
     .mat-list-base {
       @include padding(0 0);
     }

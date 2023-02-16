@@ -3,8 +3,10 @@
 .payment-plan {
   @include section-border;
   min-width: 410px;
+
   table {
     width: 100%;
+
     td {
       text-align: center;
     }
@@ -17,6 +19,7 @@
     .mat-header-row {
       background-color: $blueGrey50;
       padding: 0;
+
       .mat-header-cell {
         color: #2f3646;
       }
@@ -47,10 +50,12 @@
     display: none;
     border-top: $border-line;
   }
+
   .plan,
   .footer {
     padding: 5px 16px;
   }
+
   .plan {
     border-bottom: $border-line;
   }
@@ -59,13 +64,16 @@
     background-color: $blueGrey50;
     border-radius: 0 0 16px 16px;
   }
+
   .mat-list-base {
     height: 40px;
     border: none;
   }
+
   .mat-list-base .mat-list-item.title-S .mat-list-item-content {
     color: #2f3646;
   }
+
   .mat-list-base .mat-list-item .mat-list-item-content {
     padding: 0;
   }
@@ -73,9 +81,11 @@
   @media (max-width: $mobile) {
     width: 100%;
     min-width: unset;
+
     table {
       display: none;
     }
+
     .mobile {
       display: block;
     }

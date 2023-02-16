@@ -1,34 +1,40 @@
 <section class="account-summary">
-  <app-table-header [title]="title"></app-table-header>
+  <app-table-header
+    [isTabCollapse]="isTabCollapse"
+    [title]="title"
+    (changeTabDisplay)="onChangeTabCollapse($event)"
+  ></app-table-header>
 
-  <ng-container *ngFor="let summaryItem of summaryItems">
-    <div
-      fxLayout="row"
-      fxLayoutAlign="space-between center"
-      class="summary-header title-S"
-    >
-      <p>{{ summaryItem.period }}</p>
-      <p>{{ getSummaryItemCost(summaryItem.details) | currency }}</p>
-    </div>
+  <div [@collapseTableTab]="isTabCollapse">
+    <ng-container *ngFor="let summaryItem of summaryItems">
+      <div
+        fxLayout="row"
+        fxLayoutAlign="space-between center"
+        class="summary-header title-S"
+      >
+        <p>{{ summaryItem.period }}</p>
+        <p>{{ getSummaryItemCost(summaryItem.details) | currency }}</p>
+      </div>
 
-    <app-items-list [items]="summaryItem.details"></app-items-list>
-  </ng-container>
+      <app-items-list [items]="summaryItem.details"></app-items-list>
+    </ng-container>
 
-  <footer>
-    <mat-list role="list" fxLayout="row" fxLayoutAlign="space-between center">
-      <mat-list-item class="title-S" role="listitem">Total</mat-list-item>
-      <mat-list-item class="title-S" role="listitem" fxLayoutAlign="end">{{
-        getTotalCost() | currency
-      }}</mat-list-item>
-    </mat-list>
+    <footer>
+      <mat-list role="list" fxLayout="row" fxLayoutAlign="space-between center">
+        <mat-list-item class="title-S" role="listitem">Total</mat-list-item>
+        <mat-list-item class="title-S" role="listitem" fxLayoutAlign="end">{{
+          getTotalCost() | currency
+        }}</mat-list-item>
+      </mat-list>
 
-    <app-items-list [items]="spendings"></app-items-list>
+      <app-items-list [items]="spendings"></app-items-list>
 
-    <mat-list role="list" fxLayout="row" fxLayoutAlign="space-between center">
-      <mat-list-item class="title-S" role="listitem">Balance</mat-list-item>
-      <mat-list-item class="title-S" role="listitem" fxLayoutAlign="end">{{
-        getTotalCost() - totalSpendings | currency
-      }}</mat-list-item>
-    </mat-list>
-  </footer>
+      <mat-list role="list" fxLayout="row" fxLayoutAlign="space-between center">
+        <mat-list-item class="title-S" role="listitem">Balance</mat-list-item>
+        <mat-list-item class="title-S" role="listitem" fxLayoutAlign="end">{{
+          getTotalCost() - totalSpendings | currency
+        }}</mat-list-item>
+      </mat-list>
+    </footer>
+  </div>
 </section>

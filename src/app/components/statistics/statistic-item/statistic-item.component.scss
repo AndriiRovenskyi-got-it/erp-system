@@ -27,6 +27,7 @@
     .body-S {
       color: $blueGrey400;
       @include margin-top;
+
       &.overlay {
         position: absolute;
         right: 16px;
@@ -34,14 +35,18 @@
         max-width: 65%;
       }
     }
+
     &.awesome-statistic {
+
       & ::ng-deep .mat-progress-spinner circle,
       .mat-spinner circle {
         stroke: $green600;
         stroke-linecap: round;
       }
     }
+
     &.normal-statistic {
+
       & ::ng-deep .mat-progress-spinner circle,
       .mat-spinner circle {
         stroke: $orange;

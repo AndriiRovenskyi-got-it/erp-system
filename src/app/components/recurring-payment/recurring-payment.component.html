@@ -1,7 +1,14 @@
 <section>
-  <app-table-header [title]="title"></app-table-header>
-  <app-items-list [items]="reccuringPayments"></app-items-list>
-  <div fxLayout="row" fxLayoutAlign="end center">
-    <button mat-flat-button class="title-S" color="primary">Pay Now</button>
+  <app-table-header
+    [isTabCollapse]="isTabCollapse"
+    [title]="title"
+    (changeTabDisplay)="onChangeTabCollapse($event)"
+  >
+  </app-table-header>
+  <div [@collapseTableTab]="isTabCollapse">
+    <app-items-list [items]="reccuringPayments"></app-items-list>
+    <div fxLayout="row" fxLayoutAlign="end center">
+      <button mat-flat-button class="title-S" color="primary">Pay Now</button>
+    </div>
   </div>
 </section>

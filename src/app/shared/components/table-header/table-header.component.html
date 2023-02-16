@@ -1,7 +1,9 @@
 <div fxLayout="row" fxLayoutAlign="space-between center">
-  <span class="title-M">{{title}}</span>
+  <span class="title-M">{{ title }}</span>
   <div fxLayout="row" fxLayoutGap="8px">
     <mat-icon fxLayoutAlign="center center">close</mat-icon>
-    <mat-icon fxLayoutAlign="center center">remove</mat-icon>
+    <mat-icon fxLayoutAlign="center center" (click)="onChangeTabDisplay()"
+      >remove</mat-icon
+    >
   </div>
 </div>

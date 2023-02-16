@@ -1,11 +1,15 @@
-<div fxLayout="column" fxFlexFill>
-  <div *ngIf="isFixedMenu" (click)="onChangeFixedMenuState(false)" class="fade"></div>
+<div class="content" fxLayout="column" fxFlexFill>
+  <div
+    *ngIf="isFixedMenu"
+    (click)="onChangeFixedMenuState(false)"
+    class="fade"
+  ></div>
   <app-header (openFixedMenu)="onChangeFixedMenuState($event)"></app-header>
-  <div fxFlex fxLayout="row">
+  <div class="content__main" fxFlex fxLayout="row">
     <div class="menu" [@fixedMenu]="isFixedMenu">
       <app-menu></app-menu>
     </div>
-    <div class="main-content">
+    <div fxFlex class="main-content">
       <app-dashboard></app-dashboard>
     </div>
   </div>

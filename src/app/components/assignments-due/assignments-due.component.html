@@ -1,4 +1,14 @@
 <section>
-  <app-table-header [title]="title"></app-table-header>
-  <app-assignments-table [dataSource]="dataSource" [columns]="columns" [assignmentDue]="true"></app-assignments-table>
+  <app-table-header
+    [isTabCollapse]="isTabCollapse"
+    [title]="title"
+    (changeTabDisplay)="onChangeTabCollapse($event)"
+  ></app-table-header>
+  <div [@collapseTableTab]="isTabCollapse">
+    <app-assignments-table
+    [dataSource]="dataSource"
+    [columns]="columns"
+    [assignmentDue]="true"
+  ></app-assignments-table>
+  </div>
 </section>

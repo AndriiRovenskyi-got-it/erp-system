@@ -1,13 +1,16 @@
 import { Component, OnInit } from '@angular/core';
+import { CollapseTableTab } from 'src/app/shared/constants/animations';
 import { Item } from '../../shared/components/items-list/items-list.component';
 
 @Component({
   selector: 'app-recurring-payment',
   templateUrl: './recurring-payment.component.html',
   styleUrls: ['./recurring-payment.component.scss'],
+  animations: [CollapseTableTab],
 })
 export class RecurringPaymentComponent implements OnInit {
   public title = 'Recurring Payment';
+  public isTabCollapse = false;
   public reccuringPayments: Array<Item> = [
     { title: 'Amount Past Due', cost: 461 },
     { title: 'Amount Due', cost: 461 },
@@ -17,4 +20,8 @@ export class RecurringPaymentComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  onChangeTabCollapse(value: boolean): void {
+    this.isTabCollapse = value;
+  }
 }

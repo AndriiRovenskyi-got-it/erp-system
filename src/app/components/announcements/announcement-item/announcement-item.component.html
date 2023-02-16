@@ -8,8 +8,8 @@
     <p class="body-S">{{ announcement?.description }}</p>
   </div>
   <div fxLayout="row" fxLayoutGap="8px" fxLayoutAlign="start center">
-    <p class="title-XS-Medium">{{ announcement?.date }}</p>
-    <div class="title-XS-Medium"></div>
-    <p class="title-XS-Medium">{{ announcement?.class }}</p>
+    <p [title]="announcement?.date" class="title-XS-Medium">{{ announcement?.date }}</p>
+    <div class="separator__circle"></div>
+    <p [title]="announcement?.class" class="title-XS-Medium">{{ announcement?.class }}</p>
   </div>
 </section>

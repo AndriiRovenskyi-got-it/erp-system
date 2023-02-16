@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { CollapseTableTab } from 'src/app/shared/constants/animations';
 import { Column } from '../../shared/components/assignments-table/assignments-table.component';
 
 interface PaymentPlan {
@@ -16,9 +17,11 @@ interface PaymentPlan {
   templateUrl: './payment-plan.component.html',
   styleUrls: ['./payment-plan.component.scss'],
   encapsulation: ViewEncapsulation.None,
+  animations: [CollapseTableTab],
 })
 export class PaymentPlanComponent implements OnInit {
   public title = 'Payment Plan';
+  public isTabCollapse = false;
   public columns: Array<Column> = [
     {
       columnDef: 'inst',
@@ -106,7 +109,11 @@ export class PaymentPlanComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  isNumber(val) {
+  isNumber(val): boolean {
     return typeof val === 'number';
+  }
+
+  onChangeTabCollapse(value: boolean): void {
+    this.isTabCollapse = value;
   }
 }

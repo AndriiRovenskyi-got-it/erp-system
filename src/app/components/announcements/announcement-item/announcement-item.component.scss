@@ -3,6 +3,7 @@
 .announcement-item {
   padding: 16px;
   height: 100%;
+
   * {
     text-align: left;
   }
@@ -13,6 +14,11 @@
 
   .title-XS-Medium {
     color: $grey300;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 100%;
+    white-space: nowrap;
+
     div {
       width: 4px;
       height: 4px;

@@ -3,22 +3,26 @@
 section {
   table {
     width: 100%;
+
     td {
       text-align: left;
     }
 
-    td, th {
+    td,
+    th {
       padding-top: 10px;
       padding-bottom: 10px;
     }
 
-    .mat-row, .mat-header-row {
+    .mat-row,
+    .mat-header-row {
       height: 40px;
     }
 
     .mat-header-row {
       background-color: $blueGrey50;
       padding: 0;
+
       .mat-header-cell {
         color: $grey500;
       }
@@ -29,11 +33,13 @@ section {
       border-top: $border-line;
     }
 
-    td.mat-cell:first-of-type, th.mat-header-cell:first-of-type{
+    td.mat-cell:first-of-type,
+    th.mat-header-cell:first-of-type {
       padding-left: 16px;
     }
 
-    th.mat-header-cell:last-of-type, td.mat-cell:last-of-type {
+    th.mat-header-cell:last-of-type,
+    td.mat-cell:last-of-type {
       padding-right: 16px;
     }
 
@@ -43,12 +49,15 @@ section {
 
     td.assignment-hover.mat-cell:first-of-type {
       color: $black;
+
       img {
         visibility: hidden;
       }
+
       &:hover {
         color: $green600;
         cursor: pointer;
+
         & img {
           visibility: visible;
         }
@@ -56,10 +65,14 @@ section {
     }
 
     @media (max-width: $mobile) {
-      td.mat-cell:first-of-type, th.mat-header-cell:first-of-type{
+
+      td.mat-cell:first-of-type,
+      th.mat-header-cell:first-of-type {
         width: 40%;
       }
-      th.mat-header-cell:last-of-type, td.mat-cell:last-of-type {
+
+      th.mat-header-cell:last-of-type,
+      td.mat-cell:last-of-type {
         width: 40%;
         padding-left: 20px;
       }

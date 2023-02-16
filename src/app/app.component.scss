@@ -1,5 +1,13 @@
 @import "../assets/style/variables";
 
+.content {
+  height: 100vh;
+
+  &__main {
+    height: calc(100vh - 68px);
+  }
+}
+
 .main-content {
   overflow: auto;
 }

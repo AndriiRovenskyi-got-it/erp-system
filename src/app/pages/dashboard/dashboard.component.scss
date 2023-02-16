@@ -20,15 +20,19 @@ app-meeting {
   .desktop {
     display: block;
     padding: 20px 24px;
+
     .header {
       padding-bottom: 20px;
     }
   }
+
   .mobile {
     display: none;
+
     .title-XXL {
       padding-bottom: 12px;
     }
+
     * {
       width: 100%;
     }
@@ -40,6 +44,7 @@ app-meeting {
     .desktop {
       display: none;
     }
+
     .mobile {
       display: block;
       padding: 12px 20px;

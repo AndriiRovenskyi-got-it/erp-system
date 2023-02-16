@@ -1,5 +1,11 @@
 @import "../../../../../assets/style/variables";
 
+.actions {
+  &__btn {
+    width: 32px;
+  }
+}
+
 @media screen and (max-width: $mobile) {
   .actions {
     display: none;

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { state, style, trigger } from "@angular/animations";
+import { state, style, trigger } from '@angular/animations';
 
 @Component({
   selector: 'app-root',
@@ -7,10 +7,19 @@ import { state, style, trigger } from "@angular/animations";
   styleUrls: ['./app.component.scss'],
   animations: [
     trigger('fixedMenu', [
-      state('false', style({position: 'relative' })),
-      state('true', style({position: 'fixed', top: '0', height: '100vh', width: 'max-content', display: 'block'}))
+      state('false', style({ position: 'relative' })),
+      state(
+        'true',
+        style({
+          position: 'fixed',
+          top: '0',
+          height: '100vh',
+          width: 'max-content',
+          display: 'block',
+        })
+      ),
     ]),
-  ]
+  ],
 })
 export class AppComponent {
   isFixedMenu?: boolean;

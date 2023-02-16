@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CollapseTableTab } from 'src/app/shared/constants/animations';
 import {
   Assignment,
   Column,
@@ -8,9 +9,11 @@ import {
   selector: 'app-assignments-due',
   templateUrl: './assignments-due.component.html',
   styleUrls: ['./assignments-due.component.scss'],
+  animations: [CollapseTableTab]
 })
 export class AssignmentsDueComponent implements OnInit {
   public title = 'Assignments Due';
+  public isTabCollapse = false;
 
   public dataSource: Array<Assignment> = [
     {
@@ -47,4 +50,8 @@ export class AssignmentsDueComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  onChangeTabCollapse(value: boolean): void {
+    this.isTabCollapse = value;
+  }
 }

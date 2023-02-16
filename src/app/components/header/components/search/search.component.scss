@@ -4,39 +4,52 @@
   width: 100%;
 
   ::ng-deep {
-    .mat-form-field-underline {
-      display: none;
-    }
-    .mat-form-field-wrapper {
-      padding-bottom: 0;
-      .mat-form-field-appearance-fill {
-        background-color: rgba(0, 0, 0, 0);
+    .mat-form-field {
+      &-underline {
+        display: none;
+      }
+
+      &-appearance-fill,
+      &-infix {
+        padding: 7px 0;
+        border-top: 0;
+      }
+
+      &-wrapper {
+        padding-bottom: 0;
+      }
+
+      &-appearance-fill {
+        width: 490px;
+        padding: 0;
+
+        &.mat-focused {
+          .mat-form-field-flex {
+            background: none;
+          }
+        }
+
+        .mat-form-field-flex {
+          padding: 0;
+        }
+      }
+
+      &-prefix {
+        top: 3px;
+        padding: 0 10px;
       }
     }
+
     .mat-form-field-appearance-fill .mat-form-field-flex {
       background-color: $blueGrey800;
       border-radius: 8px;
-    }
-    .mat-form-field-appearance-fill {
-      width: 490px;
-      padding: 6px 0;
-      background: none;
 
-      &.mat-focused {
+      &:focus {
         background: none;
       }
-
-      .mat-form-field-flex {
-        padding: 0;
-      }
-    }
-
-    .mat-form-field-prefix {
-      padding: 0 10px;
     }
 
     .mat-input-element {
-      padding: 0 0 2px;
       font-size: 14px;
 
       &,
@@ -47,8 +60,7 @@
   }
 
   .icon-white {
-    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7487%)
-      hue-rotate(187deg) brightness(100%) contrast(103%);
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7487%) hue-rotate(187deg) brightness(100%) contrast(103%);
   }
 }
 
