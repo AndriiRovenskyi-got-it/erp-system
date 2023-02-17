@@ -3,16 +3,21 @@
 div:first-child {
   padding: 16px 20px;
 
-  mat-icon {
+  button {
     background-color: $blueGrey50;
-    color: $grey400;
     border-radius: 50%;
-    font-size: 16px;
     @include widthHeight;
+
+    mat-icon {
+      color: $grey400;
+      height: auto;
+      width: auto;
+      font-size: 11px;
+    }
   }
 }
 
-@media(max-width: $mobile) {
+@media (max-width: $mobile) {
   div:first-child {
     padding: 14px 16px;
 
@@ -20,8 +25,12 @@ div:first-child {
       @include titleBold;
     }
 
-    mat-icon {
+    button {
       @include widthHeight(28px);
+
+      mat-icon {
+        font-size: 16px;
+      }
     }
   }
 }

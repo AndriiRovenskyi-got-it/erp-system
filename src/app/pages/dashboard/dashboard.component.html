@@ -19,15 +19,40 @@
           </div>
         </div>
       </div>
-      <div fxLayout="row" fxLayoutAlign="start" fxLayoutGap="16px" fxFlexFill>
-        <div class="full-width" fxLayout="column" fxLayoutAlign="start" fxLayoutGap="16px">
-          <app-account-summary></app-account-summary>
-          <app-payment-plan></app-payment-plan>
+      <div cdkDropListGroup fxLayout="row" fxLayoutGap="16px">
+        <div class="width-100" fxLayoutAlign="start">
+          <div
+            fxLayout="column"
+            fxFill
+            cdkDropList
+            [cdkDropListData]="firstColumn"
+            (cdkDropListDropped)="drop($event)"
+          >
+            <div
+              class="main-container__table"
+              *ngFor="let component of firstColumn"
+              cdkDrag
+            >
+              <ng-container *ngComponentOutlet="component"></ng-container>
+            </div>
+          </div>
         </div>
-        <div class="full-width" fxLayout="column" fxLayoutAlign="start" fxLayoutGap="16px">
-          <app-assignments-due></app-assignments-due>
-          <app-recurring-payment></app-recurring-payment>
-          <app-assessments></app-assessments>
+        <div class="width-100" fxLayoutAlign="start">
+          <div
+            cdkDropList
+            fxFill
+            [cdkDropListData]="secondColumn"
+            fxLayout="column"
+            (cdkDropListDropped)="drop($event)"
+          >
+            <div
+              class="main-container__table"
+              *ngFor="let component of secondColumn"
+              cdkDrag
+            >
+              <ng-container *ngComponentOutlet="component"></ng-container>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -43,11 +68,38 @@
       <app-announcements></app-announcements>
       <app-meeting></app-meeting>
       <app-widgets></app-widgets>
-      <app-account-summary></app-account-summary>
-      <app-payment-plan></app-payment-plan>
-      <app-recurring-payment></app-recurring-payment>
-      <app-assignments-due></app-assignments-due>
-      <app-assessments></app-assessments>
+      <div cdkDropListGroup fxLayout="column">
+        <div class="width-100" fxLayoutAlign="start">
+          <div
+            cdkDropList
+            [cdkDropListData]="firstColumn"
+            (cdkDropListDropped)="drop($event)"
+          >
+            <div
+              class="main-container__table"
+              *ngFor="let component of firstColumn"
+              cdkDrag
+            >
+              <ng-container *ngComponentOutlet="component"></ng-container>
+            </div>
+          </div>
+        </div>
+        <div class="width-100" fxLayoutAlign="start">
+          <div
+            cdkDropList
+            [cdkDropListData]="secondColumn"
+            (cdkDropListDropped)="drop($event)"
+          >
+            <div
+              class="main-container__table"
+              *ngFor="let component of secondColumn"
+              cdkDrag
+            >
+              <ng-container *ngComponentOutlet="component"></ng-container>
+            </div>
+          </div>
+        </div>
+      </div>      
     </div>
   </div>
 </div>

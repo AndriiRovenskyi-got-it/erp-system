@@ -6,19 +6,19 @@
   &__main {
     height: calc(100vh - 68px);
   }
-}
 
-.main-content {
-  overflow: auto;
-}
+  &__information {
+    overflow: auto;
+  }
 
-.menu {
-  position: relative;
-  z-index: 1000;
+  &__menu {
+    position: relative;
+    z-index: 1000;
+  }
 }
 
 @media screen and (max-width: $mobile) {
-  .menu {
+  .content__menu {
     display: none;
   }
 }

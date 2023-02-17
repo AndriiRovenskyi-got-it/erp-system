@@ -6,10 +6,10 @@
   ></div>
   <app-header (openFixedMenu)="onChangeFixedMenuState($event)"></app-header>
   <div class="content__main" fxFlex fxLayout="row">
-    <div class="menu" [@fixedMenu]="isFixedMenu">
+    <div class="content__menu" [@fixedMenu]="isFixedMenu">
       <app-menu></app-menu>
     </div>
-    <div fxFlex class="main-content">
+    <div fxFlex class="content__information">
       <app-dashboard></app-dashboard>
     </div>
   </div>

@@ -1,14 +1,11 @@
-<section>
+<section *ngIf="!isTabHide">
   <app-table-header
     [isTabCollapse]="isTabCollapse"
     [title]="title"
+    (closeTab)="onCloseTap($event)"
     (changeTabDisplay)="onChangeTabCollapse($event)"
   ></app-table-header>
   <div [@collapseTableTab]="isTabCollapse">
-    <app-assignments-table
-      [dataSource]="dataSource"
-      [columns]="columns"
-      [assignmentDue]="false"
-    ></app-assignments-table>
+    <app-table [config]="config"></app-table>
   </div>
 </section>

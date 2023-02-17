@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BaseTable } from 'src/app/shared/classes/base-table';
 import { CollapseTableTab } from 'src/app/shared/constants/animations';
 
 interface SummaryItem {
@@ -17,9 +18,8 @@ interface SummaryDetail {
   styleUrls: ['./account-summary.component.scss'],
   animations: [CollapseTableTab],
 })
-export class AccountSummaryComponent implements OnInit {
+export class AccountSummaryComponent extends BaseTable implements OnInit {
   public title = 'Account Symmary';
-  public isTabCollapse = false;
   public totalCosts: Array<number> = [];
   public totalCost = 0;
   public totalSpendings = 0;
@@ -76,7 +76,9 @@ export class AccountSummaryComponent implements OnInit {
     },
   ];
 
-  constructor() {}
+  constructor() {
+    super();
+  }
 
   ngOnInit(): void {
     this.totalSpendings = this.getSummaryItemCost(this.spendings);
@@ -94,9 +96,5 @@ export class AccountSummaryComponent implements OnInit {
 
   getTotalCost() {
     return this.totalCosts.reduce((sum, a) => sum + a, 0);
-  }
-
-  onChangeTabCollapse(value: boolean): void {
-    this.isTabCollapse = value;
   }
 }

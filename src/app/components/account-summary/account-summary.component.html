@@ -1,7 +1,8 @@
-<section class="account-summary">
+<section *ngIf="!isTabHide" class="account-summary">
   <app-table-header
     [isTabCollapse]="isTabCollapse"
     [title]="title"
+    (closeTab)="onCloseTap($event)"
     (changeTabDisplay)="onChangeTabCollapse($event)"
   ></app-table-header>
 

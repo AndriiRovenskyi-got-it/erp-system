@@ -4,47 +4,6 @@
   @include section-border;
   min-width: 410px;
 
-  table {
-    width: 100%;
-
-    td {
-      text-align: center;
-    }
-
-    .mat-row,
-    .mat-header-row {
-      height: 40px;
-    }
-
-    .mat-header-row {
-      background-color: $blueGrey50;
-      padding: 0;
-
-      .mat-header-cell {
-        color: #2f3646;
-      }
-    }
-
-    th.mat-header-cell {
-      border-bottom: none;
-      border-top: $border-line;
-    }
-
-    td.mat-cell:first-of-type,
-    th.mat-header-cell:first-of-type {
-      text-align: left;
-      padding-left: 16px;
-    }
-
-    td.mat-cell:last-of-type {
-      padding-right: 16px;
-    }
-
-    th.mat-header-cell:last-of-type {
-      padding-right: 0;
-    }
-  }
-
   .mobile {
     width: 100%;
     display: none;

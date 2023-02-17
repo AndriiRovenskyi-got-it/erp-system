@@ -43,10 +43,6 @@ section {
       padding-right: 16px;
     }
 
-    td.mat-cell:first-of-type {
-      color: $green600;
-    }
-
     td.assignment-hover.mat-cell:first-of-type {
       color: $black;
 
@@ -85,5 +81,37 @@ section {
     color: $green600;
     border-bottom: $border-line;
     border-radius: 0 0 16px 16px;
+  }
+}
+
+.link {
+  color: $grey500;
+  text-decoration: none;
+
+  img {
+    visibility: hidden;
+  }
+
+  &:hover {
+    color: $green600;
+
+    img {
+      visibility: visible;
+    }
+  }
+}
+
+section.table-simple {
+  table {
+    td {
+      color: $black;
+    }
+
+
+    .mat-header-row {
+      .mat-header-cell {
+        color: $black;
+      }
+    }
   }
 }

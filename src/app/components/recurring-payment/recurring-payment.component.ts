@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BaseTable } from 'src/app/shared/classes/base-table';
 import { CollapseTableTab } from 'src/app/shared/constants/animations';
 import { Item } from '../../shared/components/items-list/items-list.component';
 
@@ -8,20 +9,17 @@ import { Item } from '../../shared/components/items-list/items-list.component';
   styleUrls: ['./recurring-payment.component.scss'],
   animations: [CollapseTableTab],
 })
-export class RecurringPaymentComponent implements OnInit {
+export class RecurringPaymentComponent extends BaseTable implements OnInit {
   public title = 'Recurring Payment';
-  public isTabCollapse = false;
   public reccuringPayments: Array<Item> = [
     { title: 'Amount Past Due', cost: 461 },
     { title: 'Amount Due', cost: 461 },
     { title: 'Current Balance', cost: 461 },
   ];
 
-  constructor() {}
+  constructor() {
+    super();
+  }
 
   ngOnInit(): void {}
-
-  onChangeTabCollapse(value: boolean): void {
-    this.isTabCollapse = value;
-  }
 }

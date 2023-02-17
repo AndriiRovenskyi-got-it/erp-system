@@ -8,13 +8,17 @@ import { Component, Input, EventEmitter, OnInit, Output } from '@angular/core';
 export class TableHeaderComponent implements OnInit {
   @Input() title: string;
   @Input() isTabCollapse: boolean;
-
   @Output() changeTabDisplay = new EventEmitter<boolean>();
+  @Output() closeTab = new EventEmitter<boolean>();
   constructor() {}
 
   ngOnInit(): void {}
 
   onChangeTabDisplay(): void {
     this.changeTabDisplay.emit(!this.isTabCollapse);
+  }
+
+  onCloseTab(): void {
+    this.closeTab.emit(true);
   }
 }
